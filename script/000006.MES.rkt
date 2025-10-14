@@ -1,0 +1,345 @@
+(mes
+ (meta (engine 'ADV) (charset "pc98"))
+ (seg*
+  ((cmd 206) 1 1)
+  ((cmd 197) 0 0)
+  ((cmd 197) 1 0)
+  (sound '|| 0)
+  (sound '|se | 10)
+  (image-file "A:¥GRAPH¥BL012.GPC")
+  (image-mem 1 1)
+  ((cmd 198) 32 5 127 66 15)
+  (text-frame 17 284 76 340)
+  (text-reset 14)
+  (str)
+  (str)
+  (str)
+  (proc 0)
+  (str
+   "This must be the chief's office. Zombies probably    didn't get in here, as the place is spotless.")
+  (proc 3)
+  ((cmd 182) "A:¥CLM¥BL012.CLM")
+  (exec-mem 16384 0 0 1 1)
+  (exec-mem 256 2)
+  (nop@)
+  (set-reg 0 #f)
+  (set-reg 1 #t)
+  (loop
+   ((cmd 182) P 0)
+   (if (</>
+        (//
+         (? (= Q 1))
+         (nop@)
+         (exec-mem 16384 0 0 1 1)
+         (exec-mem 256 2)
+         (set-reg 0 #f)
+         (set-reg 1 #t))
+        (//
+         (? (= Q 3))
+         (nop@)
+         (exec-mem 16384 0 0 1 3)
+         (exec-mem 256 5)
+         (set-reg 0 #f)
+         (set-reg 1 #f))
+        (//
+         (? (= Q 6))
+         (nop@)
+         (exec-mem 16384 0 0 1 6)
+         (exec-mem 256 4)
+         (set-reg 0 #t)
+         (set-reg 1 #t))))
+   (seg-call)))
+ (seg (? (= Q 9) (= 0 #f) (= 1 #t) (= 31 #f))
+   (proc 0)
+   (str "I can't see outside as the blinds are drawn.")
+   (set-reg 31 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f) (= 1 #t) (= 32 #f))
+   (proc 0)
+   (str
+    "Reminds me of my blinds... before they got destroyed.Maybe I should... Nah, I'm not taking them.")
+   (set-reg 32 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str
+    "This is the second floor, and I'm pretty sure zombiescan't jump through this, unlike last time.")
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 1 #t) (= 33 #f))
+   (proc 0)
+   (str "I can see a chair here. It's very fancy.")
+   (set-reg 33 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 1 #t) (= 34 #f))
+   (proc 0)
+   (str
+    "I wonder where the chief is. Sleeping at home? Maybe he was killed already?")
+   (proc 3)
+   (proc 0)
+   (str "It would be strange if no one attempted to contact   him.")
+   (set-reg 34 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "I wonder how many cases were solved in this chair.")
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 1 #t) (= 35 #f))
+   (proc 0)
+   (str
+    "The room is lit up by an overhead light. This must bewhat we saw from the outside.")
+   (set-reg 35 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 1 #t) (= 36 #f))
+   (proc 0)
+   (str
+    "There's a phone, pen holder, and a nameplate on the  desk. There's also a sheet of paper. Is this phone usable?")
+   (set-reg 36 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "This isn't like the desk from downstairs. It's a lot more fancy.")
+   (proc 3))
+ (seg (? (= Q 12) (= 0 #f) (= 1 #t) (= 37 #f) (= 36 #t))
+   (proc 0)
+   (str "A piece of paper? What's on it...")
+   (proc 19)
+   (image-file "A:¥GRAPH¥BL013.GPC")
+   (image-mem 1 0)
+   (str "Cole：.........?")
+   (proc 3)
+   (text-color 15)
+   (str "Evacuation Site: Central Hotel 216")
+   (proc 19)
+   (proc 0)
+   (str "Evacuation?! Maybe the cops went there?")
+   (set-reg 37 #t)
+   (proc 3)
+   (image-file "A:¥GRAPH¥BL012.GPC")
+   (image-mem 1 1))
+ (seg (? (= Q 12) (= 0 #f) (= 1 #t) (= 38 #f) (= 36 #t))
+   (image-file "A:¥GRAPH¥BL013.GPC")
+   (image-mem 1 0)
+   (proc 0)
+   (str
+    "Central Hotel. 216? Is that a room number? I've neverheard of this Central Hotel.")
+   (set-reg 38 #t)
+   (proc 3)
+   (image-file "A:¥GRAPH¥BL012.GPC")
+   (image-mem 1 1))
+ (seg (? (= Q 12) (= 0 #f) (= 1 #t) (= 36 #t))
+   (image-file "A:¥GRAPH¥BL013.GPC")
+   (image-mem 1 0)
+   (proc 0)
+   (str "We will probably be safe there. We'll head there     next.")
+   (proc 3)
+   (image-file "A:¥GRAPH¥BL012.GPC")
+   (image-mem 1 1))
+ (seg (? (= Q 13) (= 0 #f) (= 1 #t) (= 39 #f))
+   (proc 0)
+   (str
+    "There's Old Glory on display. There's one in all     police stations. America!")
+   (set-reg 39 #t)
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str
+    "Whenever I see this flag, it makes me proud of being born in America.")
+   (proc 3))
+ (seg (? (= Q 14) (= 0 #f) (= 1 #t) (= 40 #f))
+   (proc 0)
+   (str
+    "There's an ashtray and a lighter here. I would light one, but Sheila and Doc are waiting.")
+   (set-reg 40 #t)
+   (proc 3))
+ (seg (? (= Q 14) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "There's an ashtray and a lighter, nothing more,nothingless.")
+   (proc 3))
+ (seg (? (= Q 15) (= 0 #f) (= 1 #t) (= 41 #f))
+   (proc 0)
+   (str
+    "There's a painting on the wall, but I'm clueless     about paintings. I went to an art gallery once, but the moreI looked around, the more the paintings looked samey.")
+   (set-reg 41 #t)
+   (proc 3))
+ (seg (? (= Q 15) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str
+    "The more I stay here, the more I worry about how my  tax money is being spent.")
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f) (= 1 #f) (= 42 #f))
+   (proc 0)
+   (str "The flag is heavier than it looks. I'm too weak to   pick it up.")
+   (set-reg 42 #t)
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f) (= 1 #f))
+   (proc 0)
+   (str "This probably isn't useful.")
+   (proc 3))
+ (seg (? (= Q 14) (= 0 #f) (= 1 #f) (= 43 #f))
+   (proc 0)
+   (str "This lighter could be useful.")
+   (proc 3)
+   (proc 0)
+   (str "Huh? Shit, it's out of fluid.")
+   (set-reg 43 #t)
+   (proc 3))
+ (seg (? (= Q 14) (= 0 #f) (= 1 #f))
+   (proc 0)
+   (str "I don't think I could do much with an empty lighter.")
+   (proc 3))
+ (seg (? (= Q 12) (= 0 #f) (= 1 #f) (= 37 #t))
+   (proc 0)
+   (str
+    "Central Hotel...216. I've got it in my head, so I    don't need this note.")
+   (proc 3))
+ (seg (? (= Q 12) (= 0 #f) (= 1 #f))
+   (proc 0)
+   (str "Lots of stuff on the desk, but I don't think I'll    need any of it.")
+   (proc 3))
+ (seg (? (= Q 6) (= 0 #t) (= 1 #t))
+   (menu1 30 300 52 300 (</> (/ (text "ＲＥＴＵＲＮ　")) (/ (text "ＳＴＡＹ　"))))
+   (text-reset 14)
+   (branch-var
+    S
+    (</>
+     (/
+      (proc 0)
+      (str "Okay, let's go back to the corridor.")
+      (set-reg 44 #t)
+      (proc 3)
+      ((cmd 198) 32 5 127 66 0)
+      (mes-jump "A:¥MES¥000004.MES"))
+     (/ (proc 0) (str "I'll stay in this room a little longer...") (proc 3)))))
+ (seg (? (= Q 8))
+   (exec-mem 16384 0 0 1 8)
+   (exec-mem 256 7)
+   (str "Select Save Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " SAVE No.1 "))
+     (/ (str " SAVE No.2 "))
+     (/ (str " SAVE No.3 "))
+     (/ (str " SAVE No.4 "))
+     (/ (str " SAVE No.5 "))
+     (/ (str " SAVE No.6 "))
+     (/ (str " SAVE No.7 "))
+     (/ (str " SAVE No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (text-frame 41 305)
+   (set-reg 48 #t)
+   (text-color 15)
+   (str "WAIT....")
+   (branch-var
+    S
+    (</>
+     (/ (flag-save 1))
+     (/ (flag-save 2))
+     (/ (flag-save 3))
+     (/ (flag-save 4))
+     (/ (flag-save 5))
+     (/ (flag-save 6))
+     (/ (flag-save 7))
+     (/ (flag-save 8))
+     (/ (nop@))))
+   (text-frame 17 284 76 340)
+   (text-reset 14)
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f)
+   (set-reg 1 #t))
+ (seg (? (= Q 7))
+   (exec-mem 16384 0 0 1 7)
+   (exec-mem 256 6)
+   (str "Select Load Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " LOAD No.1 "))
+     (/ (str " LOAD No.2 "))
+     (/ (str " LOAD No.3 "))
+     (/ (str " LOAD No.4 "))
+     (/ (str " LOAD No.5 "))
+     (/ (str " LOAD No.6 "))
+     (/ (str " LOAD No.7 "))
+     (/ (str " LOAD No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (branch-var
+    S
+    (</>
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 1))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 2))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 3))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 4))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 5))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 6))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 7))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 8))
+     (/ (nop@))))
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f)
+   (set-reg 1 #t))
+ (seg*))

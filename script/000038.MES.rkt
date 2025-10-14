@@ -1,0 +1,306 @@
+(mes
+ (meta (engine 'ADV) (charset "pc98"))
+ (seg*
+  ((cmd 206) 1 2)
+  ((cmd 197) 0 0)
+  ((cmd 197) 1 0)
+  (image-file "A:¥GRAPH¥BL070.GPC")
+  (image-mem 1 1)
+  (image-file "A:¥GRAPH¥BL071.GPC")
+  (image-mem 1 1)
+  (sound '|| 0)
+  (sound '|| "A:¥MUSIC¥B0N_07.USO")
+  (sound '|| 1)
+  (exec-mem 10496 1 32 36 127 36 32 5 127 66 8 50)
+  (text-frame 17 284 76 340)
+  (text-reset 14)
+  (proc 8)
+  (str
+   "This sucks. You'd think there'd be more than just a  single Uzi in a gun store like this.")
+  (proc 3)
+  ((cmd 182) "A:¥CLM¥BL070.CLM")
+  (exec-mem 16384 0 0 1 1)
+  (exec-mem 256 2)
+  (nop@)
+  (set-reg 0 #f)
+  (loop
+   ((cmd 182) P 0)
+   (if (</>
+        (//
+         (? (= Q 1))
+         (nop@)
+         (exec-mem 16384 0 0 1 1)
+         (exec-mem 256 2)
+         (set-reg 0 #f))
+        (//
+         (? (= Q 3) (= 21 #t) (= 24 #t) (= 26 #t) (= 28 #t) (= 30 #t))
+         (nop@)
+         (exec-mem 16384 0 0 1 3)
+         (exec-mem 256 5)
+         (set-reg 0 #t))))
+   (seg-call)))
+ (seg (? (= Q 9) (= 0 #f) (= 18 #f))
+   (proc 8)
+   (str "There are ammo boxes on the shelf. Do they work for  this gun")
+   (proc 18)
+   (set-reg 18 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f))
+   (proc 8)
+   (str "Nothing on this shelf besides ammo.")
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 19 #f))
+   (proc 8)
+   (str "What's in this drawer?")
+   (proc 3)
+   (proc 8)
+   (str "...")
+   (proc 3)
+   (proc 8)
+   (str "Nothing. I got excited for nothing.")
+   (set-reg 19 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 20 #f))
+   (proc 8)
+   (str "There was nothing in there, so I'm not gonna check   again.")
+   (set-reg 20 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f))
+   (proc 8)
+   (str "I'm getting hungry. I always get hungry when working like this.")
+   (set-reg 21 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 22 #f))
+   (proc 8)
+   (str
+    "There's only a gun here but everything else was      taken. I wonder who put this gun here?")
+   (set-reg 22 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 23 #f))
+   (proc 8)
+   (str
+    "The clerk wouldn't have put the weapon here. Maybe itwas another person, like Cole?")
+   (set-reg 23 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f))
+   (proc 8)
+   (str
+    "You'd think there'd be a lot more weapons, but I     guess it was ransacked already.")
+   (set-reg 24 #t)
+   (proc 3))
+ (seg (? (= Q 12) (= 0 #f) (= 25 #f))
+   (proc 8)
+   (str
+    "I don't have any real gun experience. Not even sure  what kind of bullets Uzis takes.")
+   (set-reg 25 #t)
+   (proc 3))
+ (seg (? (= Q 12) (= 0 #f))
+   (proc 8)
+   (str "Never shot a revolver before either.")
+   (proc 3)
+   (proc 8)
+   (str "For now, it's safer to take this with me.")
+   (set-reg 26 #t)
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f) (= 27 #f))
+   (proc 8)
+   (str "I think this is the thing you put the bullets inside.")
+   (proc 3)
+   (proc 8)
+   (str "I wish I knew more about guns.")
+   (set-reg 27 #t)
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f))
+   (proc 8)
+   (str "If the movies were right, I think you hold the grip  like this?")
+   (proc 3)
+   (proc 8)
+   (str "Is this really gonna take these bullets?")
+   (set-reg 28 #t)
+   (proc 3))
+ (seg (? (= Q 14) (= 0 #f) (= 29 #f))
+   (proc 8)
+   (str "Any bullets in that box there?")
+   (proc 3)
+   (proc 8)
+   (str "...")
+   (proc 3)
+   (proc 8)
+   (str "Hmm... only around 20 bullets left.")
+   (set-reg 29 #t)
+   (proc 3))
+ (seg (? (= Q 14) (= 0 #f))
+   (proc 8)
+   (str "What kind of bullets are these anyway?")
+   (proc 3)
+   (proc 8)
+   (str
+    "I mean, an Uzi is a common weapon, so I'd guess it   uses the standard bullets?")
+   (set-reg 30 #t)
+   (proc 3))
+ (seg (? (= Q 12) (= 0 #t))
+   (proc 8)
+   (str "Well, I'll give it a shot.")
+   (proc 3)
+   (image-file "A:¥GRAPH¥BL070.GPC")
+   (image-mem 1 1)
+   (proc 8)
+   (str "Pretty sure the bullets go in here...")
+   (proc 3)
+   (proc 8)
+   (str "One... Two... Three...")
+   (proc 3)
+   (proc 8)
+   (str
+    "This is complex. I feel like if you reloaded like    this in the middle of a battlefield, you'd be killed really fast.")
+   (proc 3)
+   (proc 8)
+   (str
+    "Alright. 23 bullets in total. I better not put the   magazine in backwards or the bullets will fire towards me!  ...Is that how it works?")
+   (proc 3)
+   (proc 8)
+   (str "Also, there should be a safety on here, right?")
+   (proc 3)
+   (proc 8)
+   (str "Hmmm... this lever could be it...")
+   (proc 3)
+   (proc 8)
+   (str
+    "Well, I think it's all working now. Should I try     shooting at the table?")
+   (proc 3)
+   (exec-mem 16384 0 0 2 3)
+   (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+   (exec-mem 10496 0 32 5 127 66 0)
+   (sound '|| 0)
+   (mes-jump "A:¥MES¥000039.MES"))
+ (seg (? (= Q 8))
+   (exec-mem 16384 0 0 1 8)
+   (exec-mem 256 7)
+   (str "Select Save Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " SAVE No.1 "))
+     (/ (str " SAVE No.2 "))
+     (/ (str " SAVE No.3 "))
+     (/ (str " SAVE No.4 "))
+     (/ (str " SAVE No.5 "))
+     (/ (str " SAVE No.6 "))
+     (/ (str " SAVE No.7 "))
+     (/ (str " SAVE No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (text-frame 41 305)
+   (set-reg 48 #t)
+   (text-color 15)
+   (str "WAIT....")
+   (branch-var
+    S
+    (</>
+     (/ (flag-save 1))
+     (/ (flag-save 2))
+     (/ (flag-save 3))
+     (/ (flag-save 4))
+     (/ (flag-save 5))
+     (/ (flag-save 6))
+     (/ (flag-save 7))
+     (/ (flag-save 8))
+     (/ (nop@))))
+   (text-frame 17 284 76 340)
+   (text-reset 14)
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f))
+ (seg (? (= Q 7))
+   (exec-mem 16384 0 0 1 7)
+   (exec-mem 256 6)
+   (str "Select Load Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " LOAD No.1 "))
+     (/ (str " LOAD No.2 "))
+     (/ (str " LOAD No.3 "))
+     (/ (str " LOAD No.4 "))
+     (/ (str " LOAD No.5 "))
+     (/ (str " LOAD No.6 "))
+     (/ (str " LOAD No.7 "))
+     (/ (str " LOAD No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (branch-var
+    S
+    (</>
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 1))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 2))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 3))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 4))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 5))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 6))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 7))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 8))
+     (/ (nop@))))
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f))
+ (seg*))

@@ -1,0 +1,330 @@
+(mes
+ (meta (engine 'ADV) (charset "pc98"))
+ (seg*
+  ((cmd 206) 1 1)
+  ((cmd 197) 0 0)
+  ((cmd 197) 1 0)
+  (sound '|| 0)
+  (sound '|| "A:¥MUSIC¥B0N_07.USO")
+  (sound '|| 1)
+  (image-file "A:¥GRAPH¥BL032.GPC")
+  (image-mem 1 1)
+  (image-file "A:¥GRAPH¥BL040.GPC")
+  (image-mem 1 1)
+  ((cmd 193) 0 "A:¥ANIME¥BL040.GPA")
+  ((cmd 194)
+   0
+   "ｱｶ. ..ｵ...ｶ...ｲ.ｳ.ｵ..ｴ.ｲ.ｱ..ｵ...ｶ...ｴ...ｶ...ｵ...ｶ...ｴ...ｶ...ｵ...ｶ")
+  ((cmd 198) 32 5 127 66 15)
+  (text-frame 17 284 76 340)
+  (text-reset 14)
+  ((cmd 197) 0 15)
+  (proc 9)
+  (str "Ah, Cole. Let's get started then.")
+  (proc 3)
+  ((cmd 197) 0 0)
+  ((cmd 182) "A:¥CLM¥BL040.CLM")
+  (exec-mem 16384 0 0 1 1)
+  (exec-mem 256 2)
+  (nop@)
+  (set-reg 0 #f)
+  (loop
+   ((cmd 182) P 0)
+   (if (</>
+        (//
+         (? (= Q 1))
+         (nop@)
+         (exec-mem 16384 0 0 1 1)
+         (exec-mem 256 2)
+         (set-reg 0 #f))
+        (//
+         (? (= Q 2))
+         (nop@)
+         (exec-mem 16384 0 0 1 2)
+         (exec-mem 256 1)
+         (set-reg 0 #t))))
+   (seg-call)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)))
+ (seg (? (= Q 9) (= 0 #f) (= 22 #f))
+   (proc 0)
+   (str "Let's see...")
+   (set-reg 22 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f) (= 23 #f))
+   (proc 0)
+   (str "Usually, women with glasses look tight, but not her.")
+   (set-reg 23 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f))
+   (proc 0)
+   (str
+    "Before this incident, she must've been an office     worker. I can't imagine her doing that though.")
+   (set-reg 24 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 25 #f))
+   (proc 0)
+   (str "Damn. I envy her boyfriend.")
+   (set-reg 25 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 26 #f))
+   (proc 0)
+   (str "I shouldn't stare. I can't upset Sheila.")
+   (set-reg 26 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f))
+   (proc 0)
+   (str "Nice looking, but Sheila's are the best of all.")
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 27 #f))
+   (proc 0)
+   (str "Not bad. Has the sexiness of an adult.")
+   (set-reg 27 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f))
+   (proc 0)
+   (str "She has some very good fashion sense.")
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t) (= 28 #f))
+   ((cmd 197) 0 15)
+   ((cmd 197) 1 0)
+   (proc 9)
+   (str "The first thing I need you to do...")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   (proc 0)
+   (str "Oh? Zombies on the second floor? You can leave that  to me.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   ((cmd 197) 1 0)
+   (proc 9)
+   (str
+    "Oh, you know that already? Good, this meeting will  go by fast. The second floor is still unfinished, so it's   difficult to know where zombies lurk, so be cautious.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   (proc 0)
+   (str "Does the second floor have the same number of rooms  as this floor?")
+   (proc 3)
+   ((cmd 197) 0 15)
+   ((cmd 197) 1 0)
+   (proc 9)
+   (str
+    "No, there are only five rooms, much smaller. There  are four confirmed zombies.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   (proc 0)
+   (str "Four? That doesn't sound that bad.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   ((cmd 197) 1 0)
+   (proc 9)
+   (str
+    "Make sure you kill them all. For this shelter to be secure, there cannot be any zombies nearby. If you leave    one, you'll have to go right on back downstairs.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   (proc 0)
+   (str "Understood.")
+   (set-reg 28 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t))
+   ((cmd 197) 0 15)
+   ((cmd 197) 1 0)
+   (proc 9)
+   (str
+    "You'll need to get some well-deserved rest after    this. Tomorrow, Tomorrow, we'll be getting food at a store  about a thousand feet away from the hotel.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   (proc 0)
+   (str "Thanks, I'll be sure to when... I mean, if I get     back.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   ((cmd 197) 1 0)
+   (proc 9)
+   (str "Alright. Be careful, Cole.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   ((cmd 198) 32 5 127 66 0)
+   (image-file "A:¥GRAPH¥BL042.GPC")
+   (image-mem 1 1)
+   (image-file "A:¥GRAPH¥BL047.GPC")
+   (image-mem 1 1)
+   (image-file "A:¥GRAPH¥BL049.GPC")
+   (image-mem 1 1)
+   ((cmd 193) 0 "A:¥ANIME¥BL4749.GPA")
+   ((cmd 194)
+    0
+    "ｶ. ...ｹ....ｺ...ｹ...ｺ....ｶ.. ..ｹ....ｶ...ｹ..ｺ....ｶ. ..ｺｷｸ..ｷｶ. .")
+   ((cmd 193) 1 "A:¥ANIME¥BL4749.GPA")
+   ((cmd 194)
+    1
+    "ｵ. ...ｴ...ｵ... .ｴ..ｱ....ｵ.. .ｴ.ｲｳ...ｲｱｵ...ｱ...ｵ.. ..ｴ...ｱ....ｵ. .")
+   ((cmd 198) 32 5 127 66 15)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 15)
+   (proc 2)
+   (str "Cole, how are you feeling?")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   (proc 0)
+   (str
+    "I can manage. She said there's a department store a thousand feet west of here, so I'll also be getting food    tomorrow.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   ((cmd 197) 1 0)
+   (proc 1)
+   (str "Well, Cole. Shall we go now?")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   (proc 0)
+   (str "Sheila, wait for us to get back soon.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 15)
+   (proc 2)
+   (str "Both of you, be careful.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)
+   ((cmd 198) 32 5 127 66 0)
+   ((cmd 204) 99)
+   (sound '|| 0)
+   (mes-jump "A:¥MES¥000020.MES"))
+ (seg (? (= Q 8))
+   (exec-mem 16384 0 0 1 8)
+   (exec-mem 256 7)
+   (str "Select Save Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " SAVE No.1 "))
+     (/ (str " SAVE No.2 "))
+     (/ (str " SAVE No.3 "))
+     (/ (str " SAVE No.4 "))
+     (/ (str " SAVE No.5 "))
+     (/ (str " SAVE No.6 "))
+     (/ (str " SAVE No.7 "))
+     (/ (str " SAVE No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (text-frame 41 305)
+   (set-reg 48 #t)
+   (text-color 15)
+   (str "WAIT....")
+   (branch-var
+    S
+    (</>
+     (/ (flag-save 1))
+     (/ (flag-save 2))
+     (/ (flag-save 3))
+     (/ (flag-save 4))
+     (/ (flag-save 5))
+     (/ (flag-save 6))
+     (/ (flag-save 7))
+     (/ (flag-save 8))
+     (/ (nop@))))
+   (text-frame 17 284 76 340)
+   (text-reset 14)
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f))
+ (seg (? (= Q 7))
+   (exec-mem 16384 0 0 1 7)
+   (exec-mem 256 6)
+   (str "Select Load Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " LOAD No.1 "))
+     (/ (str " LOAD No.2 "))
+     (/ (str " LOAD No.3 "))
+     (/ (str " LOAD No.4 "))
+     (/ (str " LOAD No.5 "))
+     (/ (str " LOAD No.6 "))
+     (/ (str " LOAD No.7 "))
+     (/ (str " LOAD No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (branch-var
+    S
+    (</>
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 1))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 2))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 3))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 4))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 5))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 6))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 7))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 8))
+     (/ (nop@))))
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f))
+ (seg*))

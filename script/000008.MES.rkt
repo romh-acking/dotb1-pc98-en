@@ -1,0 +1,372 @@
+(mes
+ (meta (engine 'ADV) (charset "pc98"))
+ (seg*
+  ((cmd 206) 1 1)
+  ((cmd 197) 0 0)
+  ((cmd 197) 1 0)
+  (sound '|| 0)
+  (sound '|se | 10)
+  (image-file "A:¥GRAPH¥BL015.GPC")
+  (image-mem 1 1)
+  ((cmd 198) 32 5 127 66 15)
+  (text-frame 17 284 76 340)
+  (text-reset 14)
+  (if (</> (// (? (= 66 #t)) (proc 0))))
+  (str)
+  (proc 0)
+  (str
+   "This is a comms room. It's so awful. God! So many    dead police officers!")
+  (proc 3)
+  ((cmd 182) "A:¥CLM¥BL015.CLM")
+  (exec-mem 16384 0 0 1 1)
+  (exec-mem 256 2)
+  (nop@)
+  (set-reg 0 #f)
+  (set-reg 1 #t)
+  (loop
+   ((cmd 182) P 0)
+   (if (</>
+        (//
+         (? (= Q 1))
+         (nop@)
+         (exec-mem 16384 0 0 1 1)
+         (exec-mem 256 2)
+         (set-reg 0 #f)
+         (set-reg 1 #t))
+        (//
+         (? (= Q 2))
+         (nop@)
+         (exec-mem 16384 0 0 1 2)
+         (exec-mem 256 1)
+         (set-reg 0 #t)
+         (set-reg 1 #f))
+        (//
+         (? (= Q 5) (= 64 #t))
+         (nop@)
+         (exec-mem 16384 0 0 1 5)
+         (exec-mem 256 8)
+         (set-reg 0 #f)
+         (set-reg 1 #f))
+        (//
+         (? (= Q 6))
+         (nop@)
+         (exec-mem 16384 0 0 1 6)
+         (exec-mem 256 4)
+         (set-reg 0 #t)
+         (set-reg 1 #t))))
+   (seg-call)))
+ (seg (? (= Q 9) (= 0 #f) (= 1 #t) (= 56 #f))
+   (proc 0)
+   (str
+    "It seems a zombie got him from behind. He probably   died sitting in his chair.")
+   (set-reg 56 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f) (= 1 #t) (= 57 #f))
+   (proc 0)
+   (str
+    "He probably didn't hear anything with those          headphones on, even if a zombie was right behind him. I     should stay alert.")
+   (set-reg 57 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str
+    "He's dead. God, I'm not getting used to all of these dead bodies. I better search and get out.")
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 1 #t) (= 58 #f))
+   (proc 0)
+   (str "This one is gruesome. These zombies show no mercy.")
+   (set-reg 58 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 1 #t) (= 59 #f))
+   (proc 0)
+   (str "Were they even armed? They weren't prepared for a    zombie attack.")
+   (set-reg 59 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "This man must've died recently. His blood isn't dry  yet.")
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 1 #t) (= 60 #f))
+   (proc 0)
+   (str
+    "A zombie must've come in here, killed her first, thenthe other guy tried to help the one on the right, but was   attacked. Seems there were 2 zombies.")
+   (set-reg 60 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 1 #t) (= 61 #f))
+   (proc 0)
+   (str "Doesn't matter who you are, these zombies are        merciless.")
+   (set-reg 61 #t)
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "She must've been young. How terrible.")
+   (proc 3))
+ (seg (? (= Q 12) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "This clock still works. It's showing the correct     time.")
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f) (= 1 #t) (= 62 #f))
+   (proc 0)
+   (str
+    "There's communications gear, computers, and other    stuff on the desk.")
+   (set-reg 62 #t)
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f) (= 1 #t) (= 63 #f))
+   (proc 0)
+   (str "If you look at the desks, it's clear what happened.")
+   (set-reg 63 #t)
+   (proc 3))
+ (seg (? (= Q 13) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "I don't see anything of note on the desk.")
+   (proc 3))
+ (seg (? (= Q 14) (= 0 #f) (= 1 #t))
+   (proc 0)
+   (str "There's stuff everywhere. Must've been a hard fight.")
+   (proc 3))
+ (seg (? (= Q 15) (= 0 #f) (= 1 #t) (= 62 #t) (= 64 #f))
+   (proc 0)
+   (str
+    "This device seems to be used to talk with police carsdirectly. Maybe I can use it.")
+   (set-reg 64 #t)
+   (proc 3))
+ (seg (? (= Q 15) (= 0 #f) (= 1 #t) (= 62 #t))
+   (proc 0)
+   (str "This radio is for talking with police cars.")
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t) (= 1 #f))
+   (proc 0)
+   (str "They're dead, with nothing to say.")
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #t) (= 1 #f))
+   (proc 0)
+   (str "They're dead, with nothing to say.")
+   (proc 3))
+ (seg (? (= Q 11) (= 0 #t) (= 1 #f))
+   (proc 0)
+   (str "They're dead, with nothing to say.")
+   (proc 3))
+ (seg (? (= Q 15) (= 0 #f) (= 1 #f) (= 75 #f))
+   (proc 0)
+   (str "Maybe I could contact a patrol car.")
+   (proc 3)
+   (proc 0)
+   (str "Hello? Anyone there? Hello?")
+   (proc 19)
+   (text-color 15)
+   (if (</> (// (? (= 600 #f)) (nop@) (sound '|se | 29) (text-delay 0 0))))
+   (str "Radio： *crackle* *crackle*")
+   (proc 3)
+   (proc 0)
+   (str "Is anybody out there? Is this thing on?")
+   (proc 19)
+   (if (</> (// (? (= 600 #f)) (nop@) (sound '|se | 29) (text-delay 0 0))))
+   (text-color 15)
+   (str "Radio： *crackle* *crackle*")
+   (proc 3)
+   (text-color 15)
+   (str "Radio： ")
+   (text "Ｂｒａｉｎｓ")
+   (str "... ")
+   (text "Ｂｒａｉｎｓ")
+   (str "...")
+   (proc 19)
+   (proc 0)
+   (str "There's someone out there! It works!")
+   (proc 3)
+   (text-color 15)
+   (str "Radio： ")
+   (text "Ｍｏｒｅ　ｂｒａｉｎｓ")
+   (str "...")
+   (text "　ｈａｈａ")
+   (str "...")
+   (text "　ｅａｔ　　　ｂｒａｉｎｓ")
+   (str "...")
+   (proc 19)
+   (proc 0)
+   (str "Wait a minute, that's no cop!")
+   (proc 3)
+   (text-color 15)
+   (str "Radio： ")
+   (str "...")
+   (text "Ｂｒａｉｎｓ？　Ｍｍｍｍ")
+   (str " ...")
+   (proc 19)
+   (text-color 15)
+   (str "Radio： *CRUNCH* ")
+   (proc 3)
+   (proc 0)
+   (str "Ugh. Sounds like the voices of hellish demons        groaning at me.")
+   (proc 3)
+   (proc 0)
+   (str "...")
+   (proc 3)
+   (proc 0)
+   (str
+    "Are zombies eating brains? Is that why they are      killing people? Why would they want to eat brains?")
+   (proc 3)
+   (proc 0)
+   (str "Maybe they need the brains to live.")
+   (set-reg 75 #t)
+   (proc 3))
+ (seg (? (= Q 15) (= 1 #f) (= 0 #f))
+   (proc 0)
+   (str "I don't want to hear this anymore.")
+   (proc 3))
+ (seg (? (= Q 6) (= 0 #t) (= 1 #t))
+   (menu1 30 300 52 300 (</> (/ (text "ＲＥＴＵＲＮ　")) (/ (text "ＳＴＡＹ　"))))
+   (text-reset 14)
+   (branch-var
+    S
+    (</>
+     (/
+      (if (</>
+           (//
+            (? (= 66 #f) (= 75 #t))
+            (proc 0)
+            (str "I better tell Doc about this later.")
+            (set-reg 66 #t)
+            (proc 3)
+            ((cmd 198) 32 5 127 66 0)
+            (mes-jump "A:¥MES¥000004.MES"))
+           (//
+            (proc 0)
+            (str "Maybe I should go elsewhere?")
+            (set-reg 66 #t)
+            (proc 3)
+            ((cmd 198) 32 5 127 66 0)
+            (mes-jump "A:¥MES¥000004.MES")))))
+     (/ (proc 0) (str "No, I'll investigate here some more...") (proc 3)))))
+ (seg (? (= Q 8))
+   (exec-mem 16384 0 0 1 8)
+   (exec-mem 256 7)
+   (str "Select Save Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " SAVE No.1 "))
+     (/ (str " SAVE No.2 "))
+     (/ (str " SAVE No.3 "))
+     (/ (str " SAVE No.4 "))
+     (/ (str " SAVE No.5 "))
+     (/ (str " SAVE No.6 "))
+     (/ (str " SAVE No.7 "))
+     (/ (str " SAVE No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (text-frame 41 305)
+   (set-reg 48 #t)
+   (text-color 15)
+   (str "WAIT....")
+   (branch-var
+    S
+    (</>
+     (/ (flag-save 1))
+     (/ (flag-save 2))
+     (/ (flag-save 3))
+     (/ (flag-save 4))
+     (/ (flag-save 5))
+     (/ (flag-save 6))
+     (/ (flag-save 7))
+     (/ (flag-save 8))
+     (/ (nop@))))
+   (text-frame 17 284 76 340)
+   (text-reset 14)
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f)
+   (set-reg 1 #t))
+ (seg (? (= Q 7))
+   (exec-mem 16384 0 0 1 7)
+   (exec-mem 256 6)
+   (str "Select Load Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " LOAD No.1 "))
+     (/ (str " LOAD No.2 "))
+     (/ (str " LOAD No.3 "))
+     (/ (str " LOAD No.4 "))
+     (/ (str " LOAD No.5 "))
+     (/ (str " LOAD No.6 "))
+     (/ (str " LOAD No.7 "))
+     (/ (str " LOAD No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (branch-var
+    S
+    (</>
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 1))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 2))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 3))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 4))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 5))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 6))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 7))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 8))
+     (/ (nop@))))
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f)
+   (set-reg 1 #t))
+ (seg*))

@@ -1,0 +1,387 @@
+(mes
+ (meta (engine 'ADV) (charset "pc98"))
+ (seg*
+  ((cmd 206) 1 2)
+  ((cmd 197) 0 0)
+  ((cmd 197) 1 0)
+  (image-file "A:¥GRAPH¥BL082.GPC")
+  (image-mem 1 1)
+  (image-file "A:¥GRAPH¥BL065.GPC")
+  (image-mem 1 1)
+  ((cmd 193) 0 "A:¥ANIME¥BL083.GPA")
+  ((cmd 194) 0 "ｱ. ..ｳ...ｴ..ｱ... ｴ...ｳ..ｲ...ｴ...ｱ.. .ｳ..ｱ.. .ｴ...ｳ..ｴ..ｱ .")
+  (if (</>
+       (//
+        (? (= 24 #t) (= 31 #f))
+        (image-file "A:¥GRAPH¥BL083.GPC")
+        (image-mem 1 0)
+        ((cmd 193) 1 "A:¥ANIME¥BL083.GPA")
+        ((cmd 194)
+         1
+         "ｵ. ..ｸ..ｵ..ｸ...ｵ. .ｸ..ｵ...ｸ..ｵ. .ｸ...ｵ...ｸ..ｵ ｶｷ..ｶｵ."))))
+  (sound '|| 0)
+  (sound '|| "A:¥MUSIC¥B0N_05.USO")
+  (sound '|| 1)
+  (exec-mem 10496 1 32 36 127 36 32 5 127 66 8 50)
+  ((cmd 197) 0 15)
+  ((cmd 197) 1 0)
+  (if (</>
+       (//
+        (? (= 31 #f))
+        (proc 8)
+        (str "Cole, you're late. Where were you?")
+        (proc 3)
+        ((cmd 197) 0 0)
+        ((cmd 197) 1 0)
+        (proc 0)
+        (str "We went to Doc Cooger's house. Check out what we     found.")
+        (set-reg 24 #t)
+        (proc 3)
+        ((cmd 197) 0 0)
+        ((cmd 197) 1 15)
+        (proc 2)
+        (str "Thanks for eariler, Cain!")
+        (proc 3)
+        ((cmd 197) 0 0)
+        ((cmd 197) 1 0)
+        (proc 0)
+        (str
+         "Speaking of, Sheila told me you helped her earlier inthe city. Thank you for that.")
+        (proc 3)
+        ((cmd 197) 0 15)
+        ((cmd 197) 1 0)
+        (proc 8)
+        (str "Oh, no big deal. I just got here anyway.")
+        (proc 3)
+        (if (</>
+             (//
+              (? (= 24 #t))
+              ((cmd 197) 0 0)
+              ((cmd 197) 1 0)
+              (proc 0)
+              (str
+               "Sheila, do you mind heading back to the room? We haveto figure out what to do next and someone has to stay back  with the others just in case.")
+              (proc 3)
+              ((cmd 197) 0 0)
+              ((cmd 197) 1 15)
+              (proc 2)
+              (str "Yeah, understood. See you.")
+              (proc 3)
+              ((cmd 197) 0 0)
+              ((cmd 197) 1 0)
+              ((cmd 198) 32 5 127 66 0)
+              (image-file "A:¥GRAPH¥BL082.GPC")
+              (image-mem 1 1)
+              (image-file "A:¥GRAPH¥BL065.GPC")
+              (image-mem 1 1)
+              ((cmd 198) 32 5 127 66 15)))))))
+  (nop@)
+  (set-reg 31 #t)
+  (text-frame 17 284 76 340)
+  (text-reset 14)
+  ((cmd 182) "A:¥CLM¥BL082.CLM")
+  (exec-mem 16384 0 0 1 1)
+  (exec-mem 256 2)
+  (nop@)
+  (set-reg 0 #f)
+  (loop
+   ((cmd 182) P 0)
+   (if (</>
+        (//
+         (? (= Q 1))
+         (nop@)
+         (exec-mem 16384 0 0 1 1)
+         (exec-mem 256 2)
+         (set-reg 0 #f))
+        (//
+         (? (= Q 2))
+         (nop@)
+         (exec-mem 16384 0 0 1 2)
+         (exec-mem 256 1)
+         (set-reg 0 #t))))
+   (seg-call)
+   ((cmd 197) 0 0)
+   ((cmd 197) 1 0)))
+ (seg (? (= Q 9) (= 0 #f) (= 29 #t))
+   (proc 0)
+   (str
+    "Cain seems to have gotten some great info. He's a    good journalist.")
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f) (= 25 #f))
+   (proc 0)
+   (str "If it wasn't for Cain, I would've been dead a long   time ago.")
+   (set-reg 25 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #f))
+   (proc 0)
+   (str
+    "I have to tell Cain about Doc's house. He's probably still suspicious of him.")
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f) (= 26 #f))
+   (proc 0)
+   (str "There's a lot of nice cars here.")
+   (set-reg 26 #t)
+   (proc 3))
+ (seg (? (= Q 10) (= 0 #f))
+   (proc 0)
+   (str "I wonder if the car owners are still alive.")
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t) (= 27 #f))
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str "What'd you find at Cooger's?")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str
+    "I found Doc's diary in his study. Get this, someone  stole the serum a month ago.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str "I see...")
+   (set-reg 27 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t) (= 28 #f))
+   (proc 0)
+   (str
+    "It looks like he talked about it at a conference, andsomeone broke into his house and stole a sample afterwards.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str "Yeah. Possibly a detective, nicknamed 'Killer'?")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str "What? You know about Killer?")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str
+    "I was at the 16th Precinct and found notes about     Doctor Cooger at Killer's desk, along with a vial of clear  liquid that looks to be the resurrection serum.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str "Wait, was Killer the one who stole Doc's research?")
+   (set-reg 28 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t) (= 29 #f))
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str
+    "I looked into him. It doesn't add up. He has good    marks and seems to be an upstanding family man, that sort ofthing. What would his motivation be?")
+   (proc 3)
+   (proc 8)
+   (str
+    "Why would he do something like this? Normally, it's  best to ask but I don't think we have that option...")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str "I'm shocked. Killer's part of Ghoul's zombie-killing team.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str "What?!?!")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str
+    "I've only talked with Killer once, so I don't know   him that much. He's neither overly calm nor upset.")
+   (proc 3)
+   (proc 0)
+   (str
+    "Killer was the first person we met here, and he was  alone. If I were him, I would've killed our whole lot and   covered it up.")
+   (proc 3)
+   (proc 0)
+   (str "But, he didn't...")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str
+    "Wait, Cooger died shortly after that, right? Could   Killer have lived up to his name?")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str "No, a zombie killed him alright. I saw it with my owneyes.")
+   (set-reg 29 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t) (= 30 #f))
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str
+    "I don't doubt that, but what if Killer made the      zombie kill Cooger?")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str "No way. How can you possibly control a zombie like   that?")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str
+    "It's hard to imagine a cop experimenting on the dead with a drug like this.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str
+    "But Killer's a cop, not a scientist. Plus, Doc's drugwasn't finished at the time...")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str
+    "If it was him, he couldn't have acted alone. Who     knows what kind of connections he has?")
+   (set-reg 30 #t)
+   (proc 3))
+ (seg (? (= Q 9) (= 0 #t))
+   (proc 0)
+   (str "That bastard! I'll make him pay!")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str "Where is he now?")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (proc 0)
+   (str
+    "He should still be on the 3rd floor. We gotta find   him and figure out what he's doing.")
+   (proc 3)
+   ((cmd 197) 0 15)
+   (proc 8)
+   (str
+    "I'll go. I can't abide someone stealing another's    work. He's probably waiting to catch you alone, anyway.")
+   (proc 3)
+   ((cmd 197) 0 0)
+   (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+   (exec-mem 10496 0 32 5 127 66 0)
+   ((cmd 204) 99)
+   (sound '|| 0)
+   (mes-jump "A:¥MES¥000053.MES"))
+ (seg (? (= Q 8))
+   (exec-mem 16384 0 0 1 8)
+   (exec-mem 256 7)
+   (str "Select Save Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " SAVE No.1 "))
+     (/ (str " SAVE No.2 "))
+     (/ (str " SAVE No.3 "))
+     (/ (str " SAVE No.4 "))
+     (/ (str " SAVE No.5 "))
+     (/ (str " SAVE No.6 "))
+     (/ (str " SAVE No.7 "))
+     (/ (str " SAVE No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (text-frame 41 305)
+   (set-reg 48 #t)
+   (text-color 15)
+   (str "WAIT....")
+   (branch-var
+    S
+    (</>
+     (/ (flag-save 1))
+     (/ (flag-save 2))
+     (/ (flag-save 3))
+     (/ (flag-save 4))
+     (/ (flag-save 5))
+     (/ (flag-save 6))
+     (/ (flag-save 7))
+     (/ (flag-save 8))
+     (/ (nop@))))
+   (text-frame 17 284 76 340)
+   (text-reset 14)
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f))
+ (seg (? (= Q 7))
+   (exec-mem 16384 0 0 1 7)
+   (exec-mem 256 6)
+   (str "Select Load Number.")
+   (menu1
+    20
+    305
+    34
+    305
+    48
+    305
+    62
+    305
+    20
+    325
+    34
+    325
+    48
+    325
+    62
+    325
+    68
+    285
+    (</>
+     (/ (str " LOAD No.1 "))
+     (/ (str " LOAD No.2 "))
+     (/ (str " LOAD No.3 "))
+     (/ (str " LOAD No.4 "))
+     (/ (str " LOAD No.5 "))
+     (/ (str " LOAD No.6 "))
+     (/ (str " LOAD No.7 "))
+     (/ (str " LOAD No.8 "))
+     (/ (str "[CANCEL]"))))
+   (text-reset 14)
+   (branch-var
+    S
+    (</>
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 1))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 2))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 3))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 4))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 5))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 6))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 7))
+     (/
+      (exec-mem 10496 2 32 5 127 66 32 36 127 36 0 50)
+      (exec-mem 10496 0 32 5 127 66 0)
+      (flag-load 8))
+     (/ (nop@))))
+   (exec-mem 16384 0 0 1 1)
+   (exec-mem 256 2)
+   (nop@)
+   (set-reg 0 #f))
+ (seg*))
