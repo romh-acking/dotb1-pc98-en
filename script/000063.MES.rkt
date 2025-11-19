@@ -133,7 +133,7 @@
          (text "　"))
         (//
          (? (= T 2))
-         (str "･Sheila: Cole, what are you going to shoot?! ")
+         (str "Sheila: Cole, what are you going to shoot?! ")
          (text 'br)
          (str "Cole: We have to get out!")
          (text "　"))

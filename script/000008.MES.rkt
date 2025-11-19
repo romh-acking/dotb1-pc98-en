@@ -10,7 +10,7 @@
   ((cmd 198) 32 5 127 66 15)
   (text-frame 17 284 76 340)
   (text-reset 14)
-  (if (</> (// (? (= 66 #t)) (proc 4) (str "Cole: ") (proc 0))))
+  (if (</> (// (? (= 66 #t)) (proc 4))))
   (str)
   (proc 4) (str "Cole: ") (proc 0)
    (str "This is a comms room. It's so awful. God! So many" 'br)

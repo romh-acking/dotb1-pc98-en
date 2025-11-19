@@ -319,7 +319,7 @@
          (text-reset 0)
          (text 'br) (str "       TRANSLATION  : CROOKERWINE")
          (text 'br) (str "                    : JACKDBS")
-         (text 'br) (str "                    : TRENTSIGNIA")
+         (text 'br) (str "       v1.1         : TRENTSIGNIA")
          (wait)
          (text-reset 0)))))
  (seg*))

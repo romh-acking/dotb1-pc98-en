@@ -19,7 +19,7 @@
         (proc 3)
         (proc 4) (str "Cole: ") (proc 0)
          (str "Right, they're probably in one of these rooms. Be" 'br)
-         (str "careful. ")
+         (str "careful")
         (str "."))
        (//
         (? (= 21 #t) (= 22 #f) (= 23 #f) (= 24 #f) (= 25 #f))
