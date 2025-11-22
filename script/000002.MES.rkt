@@ -7,6 +7,7 @@
   (exec-mem 10496 2 32 5 127 66 73 33 85 41 0 50)
   (image-file "A:¥GRAPH¥BL007.GPC") (image-mem 1 1)
   (sound '|| 0)
+; (sound 'cd 0)									; FMT only
   (exec-mem 10496 1 73 33 85 41 32 5 127 66 8 50)
   (text-frame 17 284 76 340)
   (text-reset 14)

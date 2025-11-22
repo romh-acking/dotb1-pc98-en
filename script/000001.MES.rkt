@@ -5,13 +5,14 @@
   ((cmd 197) 0 0)
   ((cmd 197) 1 0)
   ((cmd 209) 0 5)
-  (mouse 3 0 0)
+  (mouse 3 0 0)									; PC98/FMT
   (text-frame 0 0 79 399)
   (text-reset 14)
   (image-file "A:¥GRAPH¥FRR.GPC") (image-mem 0)
   (image-file "A:¥GRAPH¥BLOP01.GPC") (image-mem 1 1)
   (image-file "A:¥GRAPH¥BLOP04.GPC") (image-mem 1 1)
   (sound '|| 0)
+; (sound 'cd 0)									  FMT only
   (sound '|se | 10)
   (if (</>
        (//
@@ -83,11 +84,11 @@
            (str "Ha. There's a much bigger problem than that.")
         (set-reg 27 #t)
         (proc 3))
-       (//
+       (//									; from loading game
         ((cmd 197) 0 15)
         (proc 4) (str "Cooger: ") (proc 1)
            (str "If we don't do anything, something terrible is" 'br)
-  (str "gonna happen.")
+        (str "gonna happen.")
         (proc 3))))
 
 ; 	Objects defined here...
@@ -142,7 +143,7 @@
    (proc 4) (str "Cole: ") (proc 0)
     (str "If that policeman attacks people, it won't end well.")
    (proc 3)
-   (sound '|se | 29)
+   (sound '|se | 29)								; PC98/X68K
    (text-delay 0)
    (text-color 15)
    (proc 4) (str "Sheila: ") (proc 2)
@@ -504,14 +505,14 @@
    ((cmd 194) 0 "ｱ...ｲ...ｳ...ｴ...ｵ...ｲ...ｳ...ｴ...ｵ...")
    ((cmd 197) 0 15)
    ((cmd 198) 32 5 127 66 15)
+;  (sound '|| 0) (sound 'cd 3)							  FMT only
    (proc 4) (str "Cole: ") (proc 0)
     (str "Look out!")
    (proc 19)
    (proc 4) (str "Sheila: ") (proc 2)
       (str "Ahhhhhh!!!")
    (proc 3)
-   (sound '|| "A:¥MUSIC¥B0N_03.USO")
-   (sound '|| 1)
+   (sound '|| "A:¥MUSIC¥B0N_03.USO") (sound '|| 1)				; PC98/X68K
    (proc 4) (str "Cooger: ") (proc 1)
       (str "Woah! Did Jack really chase us all the way here?")
    (proc 3)
@@ -627,7 +628,7 @@
    (proc 3)
    (sound '|se | 19)
    (delay 90 0)
-   (sound '|se | 29)
+   (sound '|se | 29)								; PC98/X68K
    (text-delay 0 0)
    (text-color 15)
    (str " *rrrrr-ring* *rrrrr-ring* ")
@@ -647,7 +648,7 @@
    (proc 3)
    (sound '|se | 19)
    (delay 90 0)
-   (sound '|se | 29)
+   (sound '|se | 29)								; PC98/X68K
    (text-delay 0 0)
    (text-color 15)
    (str " *rrrrr-ring* *rrrrr-ring* ")

@@ -10,6 +10,7 @@
   (text-frame 17 284 76 340)
   (text-reset 14)
   (sound '|| 0)
+  (sound 'cd 0)									; FMT only
   (sound '|se | 22)
   (proc 4) (str "Cole: ") (proc 0)
    (str "Holy shit! What the fuck happened in here?!")
