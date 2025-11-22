@@ -12,7 +12,7 @@
   (text-frame 17 284 76 340)
   (text-reset 14)
   (proc 4) (str "Cole: ") (proc 0)
-   (str "So this is the 16th precinct police station. Damn, it" 'br)
+   (str "So this is the 16th Precinct police station. Damn, it" 'br)
    (str "was pretty far away.")
   (proc 3)
   (proc 4) (str "Sheila: ") (proc 2)
